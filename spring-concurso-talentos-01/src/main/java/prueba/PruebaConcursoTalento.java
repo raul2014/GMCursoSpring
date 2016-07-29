@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import concursantes.Concursante;
 
 /**
- * Clase principal
+ * Clase principal del programa
  * 
  * @author raul2014
  *
