@@ -28,8 +28,8 @@ public class PruebaConcursoTalento {
 	public static void main(String[] args) {
 		factory = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Concursante concursante1 = (Concursante)factory.getBean("solei");
-		concursante1.ejecutar();
+		Concursante malabarista1 = (Concursante)factory.getBean("solei");
+		malabarista1.ejecutar();
 	}
 
 }
