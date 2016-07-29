@@ -15,10 +15,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import concursantes.Concursante;
 
 /**
+ * ==========================================================
  * Clase principal del programa
  * 
  * @author raul2014
- *
+ *==========================================================
  */
 public class PruebaConcursoTalento {
 
