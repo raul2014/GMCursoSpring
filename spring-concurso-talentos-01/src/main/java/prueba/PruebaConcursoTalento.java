@@ -14,13 +14,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import concursantes.Concursante;
 
+/**
+ * Clase principal
+ * 
+ * @author raul2014
+ *
+ */
 public class PruebaConcursoTalento {
 
 	private static BeanFactory factory;
 	
 	public static void main(String[] args) {
 		factory = new ClassPathXmlApplicationContext("applicationContext.xml");
-
+		
 		Concursante concursante1 = (Concursante)factory.getBean("solei");
 		concursante1.ejecutar();
 	}
