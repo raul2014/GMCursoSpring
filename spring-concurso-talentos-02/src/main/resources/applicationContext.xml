@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Codigo equivalente en java: Malabarista concursante1 = new Malabarista(10); -->
+	<bean id="solei" class="concursantes.Malabarista">
+		<constructor-arg value="10"/>
+	</bean>
+	
+	<!-- La logica de esta configuración es similar a la siguiente, sin embargo
+		 Spring lo hace a través del API de reflection: 
+		 
+		 Poema sonetoSorJuana = new Soneto();
+		 Concursante soleiRecitador = new MalabaristaRecitador(10, sonetoSorJuana) 
+	 -->
+	<bean id="sonetoSorJuana" class="concursantes.Soneto"/>
+	
+	<bean id="soleiRecitador" class="concursantes.MalabaristaRecitador">
+		<constructor-arg value="15" />
+		<constructor-arg ref="sonetoSorJuana" />
+	</bean>
+	
+</beans>
