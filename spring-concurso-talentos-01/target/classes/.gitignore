@@ -1,0 +1,6 @@
+/.gitignore
+/META-INF
+/applicationContext.xml
+/concursantes
+/log4j.properties
+/prueba
