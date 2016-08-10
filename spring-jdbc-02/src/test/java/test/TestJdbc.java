@@ -1,14 +1,14 @@
 /**
  * Leccion #5: SPRING JDBC
- * Titulo: Ejercicio 13 del curso SPRING de GLOBAL MENTORING
- * Version: 2.0
+ * Titulo: Ejercicio 12 del curso SPRING de GLOBAL MENTORING
+ * Version: 1.0
  * Descripcion:
  * 				- Se realiza una conexion a una base de datos embebida usando el jar H2. 
  * 				  H2 permite simular una base de datos que esta en memoria.
  * 				  Posteriormente se realiza una consulta en dicha base.
  * 
  * NOTA (05/08/2016):      
- *		- I don't use 'jdbcTemplate.queryForInt(query)' because is deprecated
+ *		- I don't use 'jdbcTemplate.queryForObject(query)' because is deprecated
  *		  since version 3.2.2. (correct me if mistake). 
  *		  To fix it, replace the code with queryForObject(String, Class).
  *
