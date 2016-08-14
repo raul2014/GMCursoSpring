@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd">
+
+	<!-- Configuracion de la base de datos embebida (bd de tipo H2).
+	 	 Indico el esquema de la bd y los datos con la cual se cargara.
+	-->
+	<jdbc:embedded-database id="datasource" type="H2">
+		<jdbc:script location="classpath:esquema.sql"/>
+		<jdbc:script location="classpath:datos.sql" />
+	</jdbc:embedded-database>
+	
+	<!-- Creo bean con el cual podre acceder a la bd  -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="datasource" />
+	</bean>
+</beans>
